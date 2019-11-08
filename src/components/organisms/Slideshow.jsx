@@ -10,35 +10,38 @@ const Slideshow = ({ images }) => {
     return (
         <SliderContainer {...settings}>
             {images.map((image, i) => (
-                <SlideBody key={i}>
+                <div key={i}>
                     <SlideImage src={image.original} alt={image.original} />
-                </SlideBody>
+                </div>
             ))}
         </SliderContainer>
-    )
-}
+    );
+};
 
 export default Slideshow;
 
 const SliderContainer = styled(Slider)`
-    display: block;
+    display: flex;
+    align-items: center;
     width: 500px;
     height: 500px;
+
+    div {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
 
     @media screen and (max-width: ${theme.mediaQueries.width.s}) {
         width: 100%;
         height: 100%;
         min-height: 10vh;
+        margin-bottom: 2rem;
     }
 `;
 
-const SlideBody = styled.div`
+const SlideImage = styled.img`
     width: 100%;
     height: 100%;
-`;
-
-const SlideImage = styled.img`
-    height:100%;
-    width: 100%;
-    object-fit: contain;
+    object-fit: scale-down;
 `;

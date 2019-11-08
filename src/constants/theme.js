@@ -1,11 +1,14 @@
 const theme = {
     colors: {
         white: "#FFFFFF",
-        black: "#090707"
+        blue: "#60B2E5",
+        black: "#090707",
+        gray: "#9AADBF",
+        red: "#F25F5C"
     },
     mediaQueries: {
         width: {
-            s: "812px",
+            s: "874px",
             m: "1024px",
             l: "1200px",
             xl: "1440px",

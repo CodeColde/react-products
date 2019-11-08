@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import Paragraph from './Paragraph';
 
 const Loading = () => {
     return (
         <Wrapper>
-            <Text>Loading...</Text>
+            <Paragraph variant="Centered">Loading...</Paragraph>
         </Wrapper>
-    )
-}
+    );
+};
 
 export default Loading;
 
@@ -18,9 +19,4 @@ const Wrapper = styled.div`
     align-items: center;
     justify-items: center;
     text-align: center;
-`;
-
-const Text = styled.p`
-    margin: auto;
-    font-size: 1.5rem;
 `;
